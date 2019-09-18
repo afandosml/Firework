@@ -30,4 +30,34 @@ For the sake of keeping it simple firework's color will be limited to Red (#FF00
 
 ## Background
 
-The system will only be trained with firework pictures taken at night, so, again for the sake of simplicty the background should always be black (#000000).
+The system will only be trained with firework pictures taken at night, so, again for the sake of simplicity the background should always be black (#000000).
+
+# Trained Model
+
+You can use the already trained model with the generator notebook. In the video you can check the learning process for this model.
+
+[![enter image description here](https://github.com/afandosml/Firework/blob/master/doc/images/Video.PNG?raw=true)](https://www.youtube.com/watch?v=nP1eEub4GjM)
+# Usage
+This repo contains 2 python notebooks, one for training and one just to generate images with an already trained model. Both python notebooks are written to run on google colab platform.
+
+## Training
+Create a folder in your google drive account. This folder needs 4 folders:
+- input
+- target
+- output
+- checkpoints
+
+Add your input images into the input folder. Add the target images into the target folders. For each image in the input folder there has to be a image with the same name in the target folder. You can use the database included in the repo.
+
+Open pix2pixFireworkLearning.ipnyb in Google Colab. Enable GPU backend for your notebook. 
+	
+	Runtime -> Change runtime type -> Hardware Accelerator -> GPU
+
+Execute all cells. The first cell will prompt you to write an authorisation code. Click on the generated link, log in into your google drive account, copy the code and paste it into the textbox in the cell's output. To confirm press enter.
+
+Now sit back and relax.  A training dataset (80%) and a test dataset (20%) are created automatically. The code will be saving in each epoch 5 generated images from the test dataset so you can track the learning process. The images will be stored in the "output" folder. Every 100 epochs a checkpoint is stored in your "checkpoints" folder. Keep in mind that each checkpoint uses around 600mb of space so you may be out of free space. Erase the older checkpoints when new ones are create so you never go out of space.	
+
+If you restart the virtual machine, the code will check if there's a checkpoint and load it to continue the learning process instead of starting over.
+
+
+## Generator
