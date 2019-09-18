@@ -8,10 +8,17 @@ The input images on most pix2pix examples (edge2cat, edge2bag, etc) are autogene
 
 # Input images
 
-As said, input images should be easy for anyone to create. They also should not be computed generated, but manually generated. Therefore sketches will be oversimplify. Fireworks are round, so a circle could be a first approach. The problem here is that fireworks are never perfect circles or ovals, but irregular shapes. With circles there's a lot of information lost, for example the direction of each spark. 
+As said, input images should be easy for anyone to create. They also should not be computed generated, but manually generated. Therefore sketches will be oversimplify. Fireworks are round, so a circle could be a first approach. The problem here is that fireworks are never perfect circles or ovals, but irregular shapes. With circles there's a lot of information lost, for example the direction of each spark. A way of keeping this information while keeping it simple is too draw the lines each spark creates. Using this technique it's even possible to select a differente color for each spark.
+
+#### Insert round shape input image
+#### Insert real input image
 
 # Color
 
 ## Fireworks
 
+For the sake of keeping it simple firework's color will be limited to Red (#FF0000), Green (#00FF00), Blue (#0000FF), Yellow (#FFFF00), Cyan (#00FFFF), Magenta (#FF00FF) and White (#FFFFFF).
+
 ## Background
+
+The system will only be trained with firework pictures taken at night, so, again for the sake of simplicty the background should always be black (#000000).
