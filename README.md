@@ -1,3 +1,4 @@
+
 # Firework
 pix2pix architecture to generate photorealistic firework pictures from a poorly drawed sketch
 
@@ -15,7 +16,7 @@ The input images on most pix2pix examples (edge2cat, edge2bag, etc) are autogene
 
 *A poorly drawn cat creates a strange cat. I swear I tried my best.*
 
-&nbsp;
+The whole code is based on [dotcsv](https://www.youtube.com/watch?v=YsrMGcgfETY)'s tutorial on pix2pix.
 # Input images
 
 As said, input images should be easy for anyone to create. They also should not be computed generated, but manually generated. Therefore sketches will be oversimplify. Fireworks are round, so a circle could be a first approach. The problem here is that fireworks are never perfect circles or ovals, but irregular shapes. With circles there's a lot of information lost, for example the direction of each spark. A way of keeping this information while keeping it simple is too draw the lines each spark creates. Using this technique it's even possible to select a differente color for each spark.
@@ -61,3 +62,4 @@ If you restart the virtual machine, the code will check if there's a checkpoint 
 
 
 ## Generator
+pix2pixFireworkLearning.ipnyb can also be used to only generated. Some minor changes are needed. However you can use generator.ipnyb to use my trained model. It will download the last checkpoint from my google drive account. After the download of the needed files you will be prompted to upload an image. You can upload as many images as you want, they will all be transformed into firework in the last cell.
